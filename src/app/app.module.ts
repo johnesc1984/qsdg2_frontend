@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,9 @@ import { LoginregistroComponent } from './componentes/loginregistro/loginregistr
 import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
 import { UsuariosComponent } from './componentes/administracion/usuarios/usuarios.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,9 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
