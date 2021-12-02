@@ -12,6 +12,7 @@ import { LoginregistroComponent } from './componentes/loginregistro/loginregistr
 import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
 import { UsuariosComponent } from './componentes/administracion/usuarios/usuarios.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+import { MensajesComponent } from './componentes/mensajes/mensajes.component';
 
 
 
@@ -25,7 +26,8 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
     LoginregistroComponent,
     ContactenosComponent,
     UsuariosComponent,
-    CarruselComponent
+    CarruselComponent,
+    MensajesComponent
   ],
   imports: [
     BrowserModule,

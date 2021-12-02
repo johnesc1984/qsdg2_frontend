@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MensajesService } from 'src/app/servicios/mensajes.service';
 import { PeticionService } from 'src/app/servicios/peticion.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { PeticionService } from 'src/app/servicios/peticion.service';
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor(private peticion:PeticionService) { }
+  constructor(private peticion:PeticionService,private msg:MensajesService) { }
   
   nombre:string = '';
   email:string = '';
@@ -74,6 +75,7 @@ export class UsuariosComponent implements OnInit {
 
     this.peticion.Post(post.host + post.path,post.data).then((res:any) => {
       console.log(res)
+      this.msg.load(res.mensaje)
       this.listar()
     })
 
@@ -93,7 +95,15 @@ export class UsuariosComponent implements OnInit {
 
     this.peticion.Post(post.host + post.path,post.data).then((res:any) => {
       console.log(res)
-      this.listar()
+      if(res.state == false){
+        this.msg.load(res.mensaje,'danger')
+      }
+      else{
+        this.msg.load(res.mensaje)
+        this.listar()
+      }
+
+    
     })
 
 
@@ -109,8 +119,11 @@ export class UsuariosComponent implements OnInit {
 
     this.peticion.Post(post.host + post.path,post.data).then((res:any) => {
       console.log(res)
+      this.msg.load(res.mensaje,'danger')
       this.listar()
     })
   }
 
+
+  
 }

@@ -1,0 +1,8 @@
+#mismensajes{ 
+    position: fixed;
+    right: 4px;
+    width: 40%;
+    margin-top: 48px;
+    z-index: 9999;
+}
+
