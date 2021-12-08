@@ -1,0 +1,30 @@
+.uploadfiles{
+    height: 41px;
+    background: #75d6cd;
+    color: white;
+    padding: 9px;
+    border-radius: 8px;
+    position: relative;
+    top: 0px;
+}
+.contenedorupload {
+    width: 100%;
+    height: auto;
+    background: #ebebeb;
+    border-radius: 8px;
+    padding-top: 3px;
+}
+
+.btnsubir {
+    height: 41px;
+    top: -3px;
+    position: relative;
+    border-radius: 7px;
+}
+
+.progress.subir {
+    height: 18px;
+    border-radius: 40px;
+    padding-left: 0px;
+    margin-top: -2px;
+}

@@ -13,6 +13,7 @@ import { ContactenosComponent } from './componentes/contactenos/contactenos.comp
 import { UsuariosComponent } from './componentes/administracion/usuarios/usuarios.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { MensajesComponent } from './componentes/mensajes/mensajes.component';
+import { SubirarchivosComponent } from './componentes/subirarchivos/subirarchivos.component';
 
 
 
@@ -27,7 +28,8 @@ import { MensajesComponent } from './componentes/mensajes/mensajes.component';
     ContactenosComponent,
     UsuariosComponent,
     CarruselComponent,
-    MensajesComponent
+    MensajesComponent,
+    SubirarchivosComponent
   ],
   imports: [
     BrowserModule,

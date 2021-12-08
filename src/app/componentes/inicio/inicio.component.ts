@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SubirarchivosService } from 'src/app/servicios/subirarchivos.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private uploads:SubirarchivosService) { }
 
   ngOnInit(): void {
   }
+
+  destino:string = this.uploads.baseUrl;
+  path:string = '/Fotoperfil/Subir/'
+  userFile:string = 'userFile'
 
 }
